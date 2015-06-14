@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <title>Receiver for message</title>
+
+  <script src="//js.pusher.com/2.2/pusher.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  
+<script>
+    // Enable pusher logging - don't include this in production
+    Pusher.log = function(message) {
+      if (window.console && window.console.log) {
+        window.console.log(message);
+      }
+    };
+
+    var pusher = new Pusher('2edbc973e0e411245c32');
+    var channel = pusher.subscribe('test_channel');
+    channel.bind('my_event', function(data) {
+
+
+     //alert(data.message);
+	$('#comentarios').append('<li>' + data.message +'<li>');
+
+
+
+    });
+  </script>
+</head>
+<body>
+<ul id="comentarios">
+
+</ul>
+
+</body>
+
