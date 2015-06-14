@@ -6,7 +6,7 @@
 
   <script src="//js.pusher.com/2.2/pusher.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-  
+ 
 <script>
     // Enable pusher logging - don't include this in production
     Pusher.log = function(message) {
@@ -19,19 +19,18 @@
     var channel = pusher.subscribe('test_channel');
     channel.bind('my_event', function(data) {
 
-
-     //alert(data.message);
-	$('#comentarios').append('<li>' + data.message +'<li>');
-
+    $('#data').text(data.message);
 
 
     });
+
+
+
   </script>
 </head>
 <body>
-<ul id="comentarios">
-
-</ul>
+<h1 id="data">
+</h1>
 
 </body>
 
