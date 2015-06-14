@@ -4,8 +4,8 @@ use warnings;
 use WWW::Pusher;
 
     my $pusher    = WWW::Pusher->new(
-                         auth_key => '2edbc973e0e411245c32',
-                         secret => 'd5bd64de24d805da47e7',
+                         auth_key => '2edbc97xxxxxxx',
+                         secret => 'd5bd64de24xxxxxxxx47e7',
                          app_id => '124655',
                          channel => 'test_channel' );
 
